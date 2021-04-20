@@ -1,4 +1,4 @@
-resource myWebsite 'Microsoft.Web/sites@2020-09-01' = {
+resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
   name: 'raphsAppService'
-  location: 'australiaeast'
+  location: 'Australia East'
 }
