@@ -1,6 +1,6 @@
 resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
   name: 'raphsAppService'
-  location: myStorage.location
+  location: 'Australia East'
   properties: {
     siteConfig: {
       appSettings: [
@@ -15,7 +15,7 @@ resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
 
 resource myStorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
   name: 'raphsStorage'
-  location: 'Australia East'
+  location: myWebsite.location
   kind: 'StorageV2'
   sku: {
     name: 'Standard_ZRS'
