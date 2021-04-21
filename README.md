@@ -6,7 +6,8 @@ April 2021.
 ## Infrastructure as Code
 
 - Repeatable, hedges against environment drift which reduces errors in
-  downstream processes; and
+  downstream processes;
+- PowerShell DSC; and
 - Azure Resource Manager templates originally used JSON.
 
 ## Azure Resource Manager Templates

@@ -25,4 +25,3 @@ resource myStorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
     name: 'Standard_ZRS'
   }
 }
-
