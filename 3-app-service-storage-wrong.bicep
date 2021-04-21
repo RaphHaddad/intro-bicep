@@ -1,3 +1,5 @@
+// what's wrong?
+
 resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
   name: 'raphsAppService'
   location: 'Australia East'
@@ -14,7 +16,7 @@ resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
 }
 
 resource myStorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
-  name: 'raphsStorage'
+  name: 'raphsstorage'
   location: myWebsite.location
   kind: 'StorageV2'
   sku: {

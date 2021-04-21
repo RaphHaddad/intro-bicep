@@ -20,4 +20,18 @@ April 2021.
 ## Bicep
 
 - *Transpiles* down to ARM templates;
-- Custom built syntax (not JSON or anything already existing online)
+- Custom built syntax (not JSON or anything already existing online); and
+- Easy installation (now comes with the Azure CLI).
+
+To deploy into an existing resource group:
+
+```cmd
+% az deployment group create --resource-group a-resource-group --template-file a-template.bicep
+```
+
+## Notes
+
+- Ready for production;
+- Use the ARM documentation as it is interoperable;
+- Easy syntax; and
+- Growing community.

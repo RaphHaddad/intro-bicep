@@ -1,5 +1,9 @@
+// symbolic links
+
+param websiteName string = 'raphsAppService'
+
 resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
-  name: 'raphsAppService'
+  name: websiteName
   location: myStorage.location
   properties: {
     siteConfig: {
@@ -14,7 +18,7 @@ resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
 }
 
 resource myStorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
-  name: 'raphsStorage'
+  name: 'raphsstorage'
   location: 'Australia East'
   kind: 'StorageV2'
   sku: {
