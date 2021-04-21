@@ -1,9 +1,11 @@
-// outputs and string functions
+// outputs
+// string functions
+// dynamic location
 
-param websiteName string = 'raphsAppService'
+param websiteName string = 'raphsappservice'
 
-resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
-  name: websiteName
+resource myWebsite 'Microsoft.Web/sites@2020-09-01' = {
+  name: '${websiteName}${uniqueString(subscription().id)}'
   location: myStorage.location
   properties: {
     siteConfig: {
@@ -19,7 +21,7 @@ resource myWebsite 'Microsoft.Web/sites@2020-06-01' = {
 
 resource myStorage 'Microsoft.Storage/storageAccounts@2019-06-01' = {
   name: 'raphsstorage${uniqueString(subscription().id)}'
-  location: 'Australia East'
+  location: resourceGroup().location
   kind: 'StorageV2'
   sku: {
     name: 'Standard_ZRS'
